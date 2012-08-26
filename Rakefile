@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "localization-middleware"
   gem.homepage = "http://github.com/kot-begemot/localization-middleware"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Localize your application via url"
+  gem.description = "Middleware that plays the connection between the url and I18n."
   gem.email = "max@studentify.nl"
   gem.authors = ["E-Max"]
   # dependencies defined in Gemfile
