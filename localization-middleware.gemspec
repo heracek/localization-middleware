@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/localization-middleware.rb",
     "lib/localization_middleware.rb",
+    "localization-middleware.gemspec",
     "test/middleware_test.rb",
     "test/test_app/.components",
     "test/test_app/app/app.rb",
