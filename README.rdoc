@@ -1,19 +1,36 @@
 = localization-middleware
 
-Description goes here.
+The gem that allows to manipulate I18n.locale via url.
 
-== Contributing to localization-middleware
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
-* Fork the project.
-* Start a feature/bugfix branch.
-* Commit and push until you are happy with your contribution.
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+== Usage
+
+* First install the gem
+
+  With Bundle
+
+    #Gemfile
+    gem "padrino-localization"
+
+    #irb
+    bundle install
+
+  or with gem
+
+    gem install padrino-localization
+
+* Now it should be added to middleware(Padrino example)
+
+    Padrino.use(Localization::Middleware, __DEFINE_HERE_LOCALES__)
+
+    # config/apps.rb
+    Padrino.use(Localization::Middleware, %w(en ru))
+
+* And that's it. You now can access your application via /page_path, /en/page_path or /ru/page_path
+(in case you specified only tow locales: russian ang english). If no locale was defined, then the
+I18n.default_locale will be used.
 
 == Copyright
 
-Copyright (c) 2012 E-Max. See LICENSE.txt for
+Copyright (c) 2012 kot-begemot. See LICENSE.txt for
 further details.
 

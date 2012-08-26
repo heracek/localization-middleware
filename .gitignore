@@ -42,6 +42,9 @@ pkg
 # For vim:
 #*.swp
 
+#for netbeans 
+nbproject
+
 # For redcar:
 #.redcar
 
