@@ -35,7 +35,7 @@ module Localization
     alias_method :langs=, :languages=
 
     def locale_pattern
-      @locale_pattern ||= /\A(?:\/(#{langs.join('|')}))?(\/?.*|)/i
+      @locale_pattern ||= /\A(?:\/(#{langs.join('|')})(?=$|\/))?(\/?.*|)/i
     end
 
     def set_locale
